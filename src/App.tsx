@@ -319,6 +319,7 @@ function App() {
   const blindNumber = (e :React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     const result = carriers.find((e)=> e.Code === tcode)
+    setTinvoice(e.target.value)
     if(result){
       if(result.International === 'false'){
         e.target.value = e.target.value.replace(/[^0-9]/g,'')
@@ -423,6 +424,7 @@ function App() {
           </div>
         </div>
       }
+    
       <div className={`${themeColor[theme].back} p-5 text-black text-sm md:text-xl xl:text-2xl flex justify-between`}>
         <h3 className="font-extrabold">국내.외 택배조회 시스템</h3>
         <div className="">
@@ -461,7 +463,7 @@ function App() {
           </select>
         </div>
         <div className="basis-full py-4  text-center border-b">
-          <input type="text" onInput={blindNumber} placeholder='운송장 번호를 입력해주세요.' className='w-full border px-5 py-2 rounded-md outline-indigo-300' />
+          <input type="text" onInput={blindNumber} onChange={(e)=>{setTinvoice(e.target.value)}} placeholder='운송장 번호를 입력해주세요.' className='w-full border px-5 py-2 rounded-md outline-indigo-300' />
         </div>
         <div className="basis-full border-b py-4 text-center">
           <button className={`${themeColor[theme].back} text-white px-5 py-2 rounded-md w-full`} onClick={PostSubmit}>조회하기</button>
