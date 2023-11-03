@@ -337,7 +337,7 @@ function App() {
     url.searchParams.append("t_key",`${process.env.REACT_APP_API_KEY}`);
 
     try{
-      const res = await fetch(`http://info.sweettracker.co.kr/api/v1/trackingInfo?t_code=${tcode}&t_invoice=${tinvoice}&t_key=${process.env.REACT_APP_API_KEY}`)
+      const res = await fetch(`https://info.sweettracker.co.kr/api/v1/trackingInfo?t_code=${tcode}&t_invoice=${tinvoice}&t_key=${process.env.REACT_APP_API_KEY}`)
       const data = await res.json()
       if(data.firstDetail === null){
         setError("데이터 없음")
