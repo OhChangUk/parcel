@@ -440,7 +440,7 @@ function App() {
       </div>
       <div className="w-4/5 md:w-3/5 xl:w-4/12 mx-auto my-40 flex rounded items-center pt-2 flex-wrap">
         <div className="border-b basis-full p-2 flex justify-center items-center text-sm">
-          <span className="basis-[30%] text-center mr-5">국내 / 국외 선택1</span>
+          <span className="basis-[30%] text-center mr-5">국내 / 국외 선택</span>
           <button onClick={()=> selectCode(1, '04', 'CJ대한통운')} className={`py-1 px-5 border border-[#ddd] rounded text-sm hover:text-white mr-4 ${isBtn === 1 ? 'text-white' : 'text-black'} ${themeColor[theme].hover} ${isBtn === 1 ? themeColor[theme].active : ''}`}>국내</button>
           <button onClick={()=> selectCode(2, '12', 'EMS')} className={`py-1 px-5  border border-[#ddd] rounded text-sm hover:text-white ${isBtn === 2 ? 'text-white' : 'text-black'} ${themeColor[theme].hover} ${isBtn === 2 ? themeColor[theme].active : ''}`}>국외</button>
         </div>
